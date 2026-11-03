@@ -1,25 +1,32 @@
 # QA89_PythonForQA
 QA Python Automation Project
+
 📌 О проекте (About the Project)
 Учебный проект по автоматизации тестирования веб-приложения с использованием Python и pytest.
+
 Тестируемый продукт: Demo Web Shop
 Ссылка: https://demowebshop.tricentis.com/
 Цель проекта: научиться создавать автоматизированные тесты, выполнять проверки через assertions, запускать тесты и хранить проект в GitHub.
+
 🛠 Технологии (Tech Stack)
-Python 3
-pytest
-Selenium WebDriver
-Git / GitHub
-PyCharm
-Google Chrome
+* Python 3
+* pytest
+* Selenium WebDriver
+* Git / GitHub
+* PyCharm
+* Google Chrome
+
 📁 Структура проекта (Project Structure)
+
 QA_Python_Automation/
+
 ├── tests/
 │   ├── test_login.py
 │   └── test_homepage.py
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
 🚀 Установка и запуск (Getting Started)
 1. Клонировать репозиторий
 git clone https://github.com/USERNAME/QA_Python_Automation.git
@@ -39,6 +46,7 @@ pytest
 selenium
 4. Запустить тесты
 python -m pytest -v
+
 🧪 Тестовые сценарии (Test Scenarios)
 ID
 Test Case
@@ -74,6 +82,7 @@ def test_homepage_title():
 
     finally:
         driver.quit()
+
 📊 Test Results
 После запуска тестов pytest показывает результаты в терминале.
 PASSED — тест успешно выполнен.
@@ -90,8 +99,9 @@ ERROR — возникла ошибка при подготовке или вы�
 Запустить тесты через pytest.
 Сохранить изменения с помощью Git commit.
 Отправить изменения на GitHub с помощью Git push.
+
 👩‍💻 Author
-Name: Your Name
+Name: Aleksandr Fokin
 Course: QA Automation with Python
 GitHub: https://github.com/USERNAME
 
