@@ -1,14 +1,17 @@
 # QA89_PythonForQA
-QA Python Automation Project
+### QA Python Automation Project
 
 📌 О проекте (About the Project)
+
 Учебный проект по автоматизации тестирования веб-приложения с использованием Python и pytest.
 
 Тестируемый продукт: Demo Web Shop
+
 Ссылка: https://demowebshop.tricentis.com/
+
 Цель проекта: научиться создавать автоматизированные тесты, выполнять проверки через assertions, запускать тесты и хранить проект в GitHub.
 
-🛠 Технологии (Tech Stack)
+### Технологии (Tech Stack)
 * Python 3
 * pytest
 * Selenium WebDriver
@@ -16,10 +19,9 @@ QA Python Automation Project
 * PyCharm
 * Google Chrome
 
-📁 Структура проекта (Project Structure)
+### Структура проекта (Project Structure)
 
 QA_Python_Automation/
-
 ├── tests/
 │   ├── test_login.py
 │   └── test_homepage.py
@@ -27,7 +29,7 @@ QA_Python_Automation/
 ├── .gitignore
 └── README.md
 
-🚀 Установка и запуск (Getting Started)
+### Установка и запуск (Getting Started)
 1. Клонировать репозиторий
 git clone https://github.com/USERNAME/QA_Python_Automation.git
 cd QA_Python_Automation
@@ -47,7 +49,7 @@ selenium
 4. Запустить тесты
 python -m pytest -v
 
-🧪 Тестовые сценарии (Test Scenarios)
+### Тестовые сценарии (Test Scenarios)
 ID
 Test Case
 Expected Result
@@ -68,7 +70,7 @@ Login with Invalid Credentials
 Появляется сообщение об ошибке
 
 Для TC-04 необходима предварительно зарегистрированная тестовая учетная запись.
-✅ Пример автоматизированного теста
+### Пример автоматизированного теста
 Файл tests/test_homepage.py:
 from selenium import webdriver
 
@@ -83,12 +85,13 @@ def test_homepage_title():
     finally:
         driver.quit()
 
-📊 Test Results
+### Test Results
 После запуска тестов pytest показывает результаты в терминале.
 PASSED — тест успешно выполнен.
 FAILED — проверка не прошла.
 ERROR — возникла ошибка при подготовке или выполнении теста.
-📋 Правила работы над проектом
+
+### Правила работы над проектом
 Создать репозиторий на GitHub.
 Клонировать проект в PyCharm.
 Создать виртуальное окружение.
@@ -100,7 +103,7 @@ ERROR — возникла ошибка при подготовке или вы�
 Сохранить изменения с помощью Git commit.
 Отправить изменения на GitHub с помощью Git push.
 
-👩‍💻 Author
+### Author
 Name: Aleksandr Fokin
 Course: QA Automation with Python
 GitHub: https://github.com/USERNAME
