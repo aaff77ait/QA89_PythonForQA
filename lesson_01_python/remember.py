@@ -93,4 +93,4 @@ my_substring = my_string[1:10:3]
 print(my_substring) # eoo
 
 print(st[:1000000]) # Python
-print("Result:", st[1000000:2]) # Result:
+print("Result:", st[1000000:2]) # Result: ПУСТО, но не ошибка
