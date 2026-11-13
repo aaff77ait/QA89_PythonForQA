@@ -117,21 +117,61 @@ def print_sublist_reverse(lst, start, finish):
     if lst is None or not isinstance(lst, list) or len(lst) == 0:
         print("Wrong args")
         return
-    if (
-            not isinstance(start, int)
-            or not isinstance(finish, int)
-    ):
+
+    # Проверяем, что КАЖДЫЙ элемент списка является целым числом (int)
+    for item in lst:
+        if not isinstance(item, int):
+            print("Wrong args")
+            return
+
+    if not isinstance(start, int) or not isinstance(finish, int):
         print("Wrong args")
         return
+
     if start < 0 or start >= len(lst) or finish >= len(lst) or start > finish:
         print("Wrong args")
         return
+
     beginning = lst[:start]
     middle_reverse = lst[start:finish + 1][::-1]
     end = lst[finish + 1:]
     print(beginning + middle_reverse + end)
 
 
-print_sublist_reverse([10, 20, 30, 40, '1', 60], 1, 3)
-
+# Проверка:
+print_sublist_reverse([10, 20, 30, 40, '1', 60], 1, 3)  # Выведет: Wrong args
+print_sublist_reverse([10, 20, 30, 40, 1, 60], 1, 3)  # Выведет: [10, 40, 30, 20, 1, 60]
 print('=' * 50)
+
+"""
+4. Advanced — Написать функцию get_students_by_grade(students)
+Функция принимает словарь, где ключ — имя студента, а значение — его оценка.
+Нужно вернуть новый словарь, где ключ — оценка, а значение — список имён студентов, получивших эту оценку.
+Пример:
+get_students_by_grade({"Alice": 90, "Bob": 85, "Diana": 90, "Charlie": 85})
+Результат:
+{90: ["Alice", "Diana"], 85: ["Bob", "Charlie"]}
+Если students равен None, является пустым словарём или аргумент не является словарём, функция должна вернуть пустой словарь:
+{}
+"""
+
+
+def get_students_by_grade(students):
+    if students is None or not isinstance(students, dict) or len(students) == 0:
+        return {}
+
+    students_by_grade = {}
+
+    for name, grade in students.items():
+        # Если такой оценки еще нет в новом словаре, заводим для нее пустой список
+        if grade not in students_by_grade:
+            students_by_grade[grade] = []
+        # Добавляем имя студента в список соответствующей оценки
+        students_by_grade[grade].append(name)
+
+    return students_by_grade
+
+
+# Проверка:
+print(get_students_by_grade({"Alice": 90, "Bob": 85, "Diana": 90, "Charlie": 85}))
+# Результат: {90: ['Alice', 'Diana'], 85: ['Bob', 'Charlie']}
